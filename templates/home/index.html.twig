@@ -1,0 +1,260 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="container mx-auto max-w-4xl px-4 py-8 space-y-8">
+    <div class="text-center space-y-4">
+      <h1 class="text-4xl font-bold">
+        Sébastien Glorian
+      </h1>
+      <p class="text-xl text-muted-foreground">
+        Analyste développeur
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+        <div class="flex items-center gap-1">
+          <i class="fa-solid fa-map-pin h-4 w-4"></i>
+          La Copechagnière, 85260, France
+        </div>
+      </div>
+    </div>
+    <div data-orientation="horizontal" role="none" data-slot="separator-root" class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h4 data-slot="card-title" class="leading-none">
+          A mon sujet
+        </h4>
+      </div>
+      <div data-slot="card-content" class="px-6 [&:last-child]:pb-6">
+        <p>
+          Développeur depuis plus de 2 décennies de solutions adaptées à des secteurs variés, je serais enchanté de mettre mes compétences au service de vos besoins. Principalement spécialisé dans le langage PHP et son framework phare Symfony, je m'intéresse également à des langages tels que RUST ou Elixir.
+        </p>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h4 data-slot="card-title" class="leading-none">
+          Expérience
+        </h4>
+      </div>
+      <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6 space-y-6">
+        <div>
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-semibold">
+                Développeur Symfony 6
+              </h3>
+              <p class="text-muted-foreground">
+                Groupe Dubreuil
+              </p>
+            </div>
+            <span class="text-sm text-muted-foreground">
+              2017 - Présent
+            </span>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>
+              Refonte d'un site ecommerce avec Symfony 6 depuis un framework propriétaire
+            </li>
+            <li>
+              Maintenance et évolutions des sites et applications du groupe
+            </li>
+            <li>
+              Développement d'un site ecommerce en vuejs
+            </li>
+          </ul>
+        </div>
+        <div data-orientation="horizontal" role="none" data-slot="separator-root" class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
+        <div>
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-semibold">
+                Développeur Symfony 2
+              </h3>
+              <p class="text-muted-foreground">
+                Naoned
+              </p>
+            </div>
+            <span class="text-sm text-muted-foreground">
+              2013 - 2016
+            </span>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>
+              Refonte du portail de présentation des archives en Symfony 2 depuis CakePHP
+            </li>
+            <li>
+              Utilisation d'elasticsearch pour la recherche avancée couplé à RabbitMQ pour l'indexation de fichiers XML.
+            </li>
+          </ul>
+        </div>
+        <div data-orientation="horizontal" role="none" data-slot="separator-root" class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
+        <div>
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-semibold">
+                Développeur PHP / Zend Framework
+              </h3>
+              <p class="text-muted-foreground">
+                Hegyd
+              </p>
+            </div>
+            <span class="text-sm text-muted-foreground">
+              2009 - 2013
+            </span>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>
+              Création de déclinaisons de sites B2B avec Zend Framework
+            </li>
+            <li>
+              Outils d'animation commerciale en PHP et javascript.
+            </li>
+          </ul>
+        </div>
+        <div data-orientation="horizontal" role="none" data-slot="separator-root" class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
+        <div>
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-semibold">
+                Développeur PHP / XHTML / CSS
+              </h3>
+              <p class="text-muted-foreground">
+                Génération Internet
+              </p>
+            </div>
+            <span class="text-sm text-muted-foreground">
+              2002 - 2008
+            </span>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>
+              Développement de sites vitrines et intranet en PHP
+            </li>
+            <li>
+              Transition vers le xhtml, css
+            </li>
+            <li>
+              Gestion du serveur de développement interne sous FreeBSD
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h4 data-slot="card-title" class="leading-none">
+          Etudes
+        </h4>
+      </div>
+      <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-semibold">
+              Formation à distance algorithmie et programmation
+            </h3>
+            <p class="text-muted-foreground">
+              CNAM
+            </p>
+          </div>
+          <span class="text-sm text-muted-foreground">
+            2001 - 2002
+          </span>
+        </div>
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-semibold">
+              Classes préparatoires aux grandes écoles
+            </h3>
+            <p class="text-muted-foreground">
+              ESEO, Angers
+            </p>
+          </div>
+          <span class="text-sm text-muted-foreground">
+            1995 - 1997
+          </span>
+        </div>
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-semibold">
+              Baccalauréat scientifique option technologie industrielle
+            </h3>
+            <p class="text-muted-foreground">
+              La Baronnerie, Angers
+            </p>
+          </div>
+          <span class="text-sm text-muted-foreground">
+            1995
+          </span>
+        </div>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h4 data-slot="card-title" class="leading-none">
+          Compétences
+        </h4>
+      </div>
+      <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+        <div class="space-y-4">
+          <div>
+            <h4 class="font-medium mb-2">
+              Backend
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Symfony
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                PostgreSQL
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                MariaDB
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                RabbitMQ
+              </span>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2">
+              Frontend
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Twig
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Vanilla JS
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                CSS
+              </span>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2">
+              Boîte à outils
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Git
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Docker
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Cursor
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Linux
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Jira
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
