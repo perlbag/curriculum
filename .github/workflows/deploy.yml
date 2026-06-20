@@ -49,5 +49,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             set -e
-            docker service update --with-registry-auth \
+            # sudo : root est authentifié sur GHCR (rôle registry) ; --with-registry-auth
+            # propage SES credentials aux agents Swarm pour pull l'image privée.
+            sudo docker service update --with-registry-auth \
               --image ${{ env.IMAGE }}:${{ github.sha }} ${{ env.SERVICE }}
