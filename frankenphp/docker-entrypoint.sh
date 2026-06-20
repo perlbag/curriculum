@@ -1,6 +1,17 @@
 #!/bin/sh
 set -e
 
+# Injecte les secrets Swarm (montés en fichiers dans /run/secrets) en variables d'environnement.
+# Le nom du fichier (= target du secret, ex. app_secret, mailer_dsn) devient la variable en MAJUSCULES
+# (APP_SECRET, MAILER_DSN). Les vraies variables d'env priment ensuite sur le .env.local.php.
+if [ -d /run/secrets ]; then
+	for _secret in /run/secrets/*; do
+		[ -f "$_secret" ] || continue
+		_key=$(basename "$_secret" | tr '[:lower:]' '[:upper:]')
+		export "$_key=$(cat "$_secret")"
+	done
+fi
+
 if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 	# Install the project the first time PHP is started
 	# After the installation, the following block can be deleted
