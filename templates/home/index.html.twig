@@ -26,7 +26,7 @@
       </div>
       <div data-slot="card-content" class="px-6 [&:last-child]:pb-6">
         <p>
-          Développeur depuis plus de 2 décennies de solutions adaptées à des secteurs variés, je serais enchanté de mettre mes compétences au service de vos besoins. Principalement spécialisé dans le langage PHP et son framework phare Symfony, je m'intéresse également à des langages tels que RUST ou Elixir.
+          Développeur depuis plus de 2 décennies de solutions adaptées à des secteurs variés, je serais enchanté de mettre mes compétences au service de vos besoins. Principalement spécialisé dans le langage PHP et son framework phare Symfony, je m'intéresse également à des langages tels que RUST ou Elixir. J'intègre au quotidien les assistants IA dans mon flux de développement pour gagner en productivité, tout en gardant un regard critique sur le code produit.
         </p>
       </div>
     </div>
@@ -41,7 +41,7 @@
           <div class="flex justify-between items-start mb-2">
             <div>
               <h3 class="font-semibold">
-                Développeur Symfony 6
+                Développeur Symfony 7
               </h3>
               <p class="text-muted-foreground">
                 Groupe Dubreuil
@@ -53,13 +53,16 @@
           </div>
           <ul class="list-disc list-inside space-y-1 text-sm">
             <li>
-              Refonte d'un site ecommerce avec Symfony 6 depuis un framework propriétaire
+              Refonte d'un site e-commerce depuis un framework propriétaire vers Symfony, ayant permis de maintenir et d'augmenter durablement son chiffre d'affaires.
             </li>
             <li>
-              Maintenance et évolutions des sites et applications du groupe
+              Conception, à 3 développeurs, d'un socle back-end mutualisé (bundles Symfony : CMS maison, templating email, outils SEO, plugins EasyAdmin) servant de base aux projets du groupe — aujourd'hui refondé pour un nouveau site.
             </li>
             <li>
-              Développement d'un site ecommerce en vuejs
+              CMS maison offrant aux équipes de webmastering une autonomie éditoriale complète, sans intervention des développeurs.
+            </li>
+            <li>
+              Architecture découplée : API Symfony alimentant un front Next.js (monorepo et design system mutualisés).
             </li>
           </ul>
         </div>
@@ -80,10 +83,10 @@
           </div>
           <ul class="list-disc list-inside space-y-1 text-sm">
             <li>
-              Refonte du portail de présentation des archives en Symfony 2 depuis CakePHP
+              Refonte d'un portail public de consultation d'archives, déployé pour plusieurs villes et collectivités, depuis CakePHP vers Symfony 2.
             </li>
             <li>
-              Utilisation d'elasticsearch pour la recherche avancée couplé à RabbitMQ pour l'indexation de fichiers XML.
+              Mise en place d'une recherche plein-texte avancée via Elasticsearch, alimentée par l'indexation de fichiers XML pilotée par RabbitMQ — là où l'ancien socle plafonnait.
             </li>
           </ul>
         </div>
@@ -104,10 +107,10 @@
           </div>
           <ul class="list-disc list-inside space-y-1 text-sm">
             <li>
-              Création de déclinaisons de sites B2B avec Zend Framework
+              Conception d'une base Zend réutilisable permettant de décliner rapidement des sites B2B pour différents clients.
             </li>
             <li>
-              Outils d'animation commerciale en PHP et javascript.
+              Développement d'outils d'animation commerciale (incentive) destinés à récompenser et fidéliser une flotte commerciale.
             </li>
           </ul>
         </div>
@@ -128,13 +131,10 @@
           </div>
           <ul class="list-disc list-inside space-y-1 text-sm">
             <li>
-              Développement de sites vitrines et intranet en PHP
+              Développement full-stack de sites vitrines et intranet en PHP.
             </li>
             <li>
-              Transition vers le xhtml, css
-            </li>
-            <li>
-              Gestion du serveur de développement interne sous FreeBSD
+              Polyvalence dev et infrastructure : administration du serveur de développement interne (FreeBSD) et transition vers les standards XHTML/CSS.
             </li>
           </ul>
         </div>
@@ -253,7 +253,43 @@
               </span>
             </div>
           </div>
+          <div>
+            <h4 class="font-medium mb-2">
+              IA
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                Claude Code
+              </span>
+              <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;>svg]:size-3 gap-1 [&amp;>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">
+                MCP
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h4 data-slot="card-title" class="leading-none">
+          IA & flux de développement
+        </h4>
+      </div>
+      <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li>
+            Intégration d'assistants IA (Claude Code, Cursor) au quotidien : génération, refactoring et revue de code.
+          </li>
+          <li>
+            Rédaction de prompts et de fichiers de contexte projet pour cadrer l'IA sur les conventions et l'architecture du code.
+          </li>
+          <li>
+            Automatisation de tâches répétitives : écriture de tests, migrations, documentation et scripts de déploiement.
+          </li>
+          <li>
+            Gain de productivité maîtrisé : relecture systématique, tests et validation de chaque suggestion avant intégration.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
