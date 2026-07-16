@@ -10,7 +10,7 @@ final class ContactDao
 	#[Assert\NotBlank(message: "contact.notblank")]
 	#[Assert\AtLeastOneOf([
 		new Assert\Email(message: "contact.email"),
-		new PhoneNumber(),
+		new PhoneNumber(defaultRegion: 'FR'),
 	])]
 	public string $contact;
 

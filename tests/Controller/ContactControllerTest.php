@@ -27,12 +27,31 @@ class ContactControllerTest extends WebTestCase
         self::assertEmailCount(0);
     }
 
-    public function testNationalPhoneFormatIsRejected(): void
+    public function testNationalPhoneFormatIsAccepted(): void
     {
-        // La contrainte téléphone ne fixe pas de région par défaut :
-        // seul le format international (+33…) est accepté.
+        // Un visiteur français tape naturellement son numéro au format
+        // national : la contrainte est configurée avec la région FR.
         $client = static::createClient();
         $this->submitContactForm($client, '0612345678', 'Bonjour');
+
+        self::assertResponseRedirects('/');
+        self::assertEmailCount(1);
+    }
+
+    public function testSpacedNationalPhoneFormatIsAccepted(): void
+    {
+        // Le format suggéré par le placeholder du formulaire.
+        $client = static::createClient();
+        $this->submitContactForm($client, '06 12 34 56 78', 'Bonjour');
+
+        self::assertResponseRedirects('/');
+        self::assertEmailCount(1);
+    }
+
+    public function testInvalidPhoneNumberIsRejected(): void
+    {
+        $client = static::createClient();
+        $this->submitContactForm($client, '06123', 'Bonjour');
 
         self::assertResponseStatusCodeSame(422);
         self::assertEmailCount(0);

@@ -43,6 +43,20 @@ class PhoneNumber extends Constraint
     public $type = self::ANY;
     public $defaultRegion = PhoneNumberUtil::UNKNOWN_REGION;
 
+    public function __construct(
+        ?string $defaultRegion = null,
+        ?string $message = null,
+        ?string $type = null,
+        ?array $groups = null,
+        mixed $payload = null,
+    ) {
+        parent::__construct(null, $groups, $payload);
+
+        $this->defaultRegion = $defaultRegion ?? $this->defaultRegion;
+        $this->message = $message ?? $this->message;
+        $this->type = $type ?? $this->type;
+    }
+
     public function getType()
     {
         switch ($this->type) {
