@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>{% block title %}Sébastien Glorian{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% block meta_description %}Analyste développeur PHP/Symfony depuis plus de vingt ans — des solutions faites pour durer. Parcours, compétences et façon de travailler.{% endblock %}">
-    <meta property="og:title" content="Sébastien Glorian — Analyste développeur">
+    <meta name="description" content="{% block meta_description %}Développeur back-end senior PHP/Symfony depuis plus de vingt ans — des solutions faites pour durer. Parcours, compétences et façon de travailler.{% endblock %}">
+    <meta property="og:title" content="Sébastien Glorian — Développeur back-end senior">
     <meta property="og:description" content="{{ block('meta_description') }}">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="{{ app.request.uri }}">
@@ -48,9 +48,14 @@
       {% block body %}{% endblock %}
     </main>
     <footer class="border-t">
-      <div class="container mx-auto max-w-4xl px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-muted-foreground">
-        <span>Sébastien Glorian — Analyste développeur</span>
-        <a href="{{ url('app_contact') }}" class="underline underline-offset-4 hover:text-foreground">Me contacter</a>
+      <div class="container mx-auto max-w-4xl px-4 py-6 space-y-2 text-sm text-muted-foreground">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 print:hidden">
+          <span>Sébastien Glorian — Développeur back-end senior</span>
+          <a href="{{ url('app_contact') }}" class="underline underline-offset-4 hover:text-foreground">Me contacter</a>
+        </div>
+        <p class="text-xs text-center sm:text-left">
+          Ce CV est une application Symfony que je développe et déploie moi-même — code source : <a href="https://github.com/perlbag/curriculum" class="underline underline-offset-4 hover:text-foreground">github.com/perlbag/curriculum</a>.
+        </p>
       </div>
     </footer>
   </body>
