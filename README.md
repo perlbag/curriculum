@@ -18,9 +18,10 @@ Quelques attentions d'usage : mode sombre suivant la préférence système, styl
 
 Chaque push sur `main` déclenche le pipeline ([deploy.yml](.github/workflows/deploy.yml)) :
 
-1. GitHub Actions construit l'image Docker (stage `frankenphp_prod`, cache de build GHA) ;
-2. l'image est poussée sur GHCR, taguée par SHA de commit ;
-3. un rolling update Docker Swarm (`docker service update`) bascule le service sur la nouvelle image, un endpoint de santé servant de sonde.
+1. les tests fonctionnels ([tests/](tests/)) sont exécutés — rien ne part en production s'ils échouent ;
+2. GitHub Actions construit l'image Docker (stage `frankenphp_prod`, cache de build GHA) ;
+3. l'image est poussée sur GHCR, taguée par SHA de commit ;
+4. un rolling update Docker Swarm (`docker service update`) bascule le service sur la nouvelle image, un endpoint de santé servant de sonde.
 
 L'image déployée est identifiée par le commit exact qui l'a produite : revenir en arrière consiste à redéployer un tag précédent.
 

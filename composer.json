@@ -1,8 +1,8 @@
 {
-    "name": "symfony/skeleton",
+    "name": "perlbag/curriculum",
     "type": "project",
     "license": "MIT",
-    "description": "A minimal Symfony project recommended to create bare bones applications",
+    "description": "CV en ligne de Sébastien Glorian — application Symfony (cv.glorian.ovh)",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
@@ -76,5 +76,10 @@
             "require": "7.3.*",
             "docker": true
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.2",
+        "symfony/browser-kit": "7.3.*",
+        "symfony/css-selector": "7.3.*"
     }
 }
