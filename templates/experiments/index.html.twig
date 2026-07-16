@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Expérimentations — Sébastien Glorian{% endblock %}
+{% block meta_description %}Journal des expérimentations de Sébastien Glorian : développement assisté par IA, CV en code, infrastructure décrite en code. Tenu au fil de l'eau, y compris pour ce qui n'aboutit pas.{% endblock %}
+
+{% set badgeClass = "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-indigo-50 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300" %}
+{% set linkClass = "underline underline-offset-4 hover:text-foreground" %}
+
+{% block body %}
+  <div class="container mx-auto max-w-4xl px-4 py-8 space-y-8">
+    <div class="text-center space-y-4">
+      <h1 class="text-3xl font-bold">
+        Expérimentations
+      </h1>
+      <p class="text-muted-foreground max-w-prose mx-auto">
+        Ce que j'essaie en ce moment, tenu au fil de l'eau. Les statuts sont francs : ce qui n'aboutit pas restera écrit ici aussi.
+      </p>
+    </div>
+
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <div class="flex items-center justify-between gap-4">
+          <h2 data-slot="card-title" class="font-semibold">
+            Développement assisté par IA
+          </h2>
+          <span data-slot="badge" class="{{ badgeClass }}">en cours</span>
+        </div>
+      </div>
+      <div data-slot="card-content" class="px-6 [&:last-child]:pb-6 space-y-3">
+        <p class="max-w-prose">
+          Ce site me sert de terrain d'essai : une partie des commits du dépôt sont co-écrits avec Claude Code, et l'historique ne cache rien du processus — les corrections de tir y sont visibles au même titre que le reste.
+        </p>
+        <p class="max-w-prose">
+          Ce que j'observe jusqu'ici : l'outil prend les tâches routinières et rend du temps de conception ; les décisions, la relecture et la responsabilité du résultat restent de mon côté. Les garde-fous classiques comptent plus que l'outil — la première exécution des tests de ce dépôt a révélé un vrai bug (une confirmation d'envoi jamais affichée), et le pipeline a bloqué un déploiement défaillant quelques heures après leur mise en place.
+        </p>
+        <p class="text-sm text-muted-foreground">
+          <a href="https://github.com/perlbag/curriculum/commits/main" class="{{ linkClass }}">L'historique des commits</a> — le processus, corrections comprises.
+        </p>
+      </div>
+    </div>
+
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <div class="flex items-center justify-between gap-4">
+          <h2 data-slot="card-title" class="font-semibold">
+            Un CV qui est du code
+          </h2>
+          <span data-slot="badge" class="{{ badgeClass }}">en ligne</span>
+        </div>
+      </div>
+      <div data-slot="card-content" class="px-6 [&:last-child]:pb-6 space-y-3">
+        <p class="max-w-prose">
+          Plutôt que d'affirmer des pratiques dans un document, ce CV est une application Symfony : tests fonctionnels exécutés avant chaque déploiement, image Docker taguée par commit, rolling update sur le serveur. Le dépôt est public, README compris — il raconte les choix techniques et leurs raisons.
+        </p>
+        <p class="text-sm text-muted-foreground">
+          <a href="https://github.com/perlbag/curriculum" class="{{ linkClass }}">Le dépôt sur GitHub</a>
+        </p>
+      </div>
+    </div>
+
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <div class="flex items-center justify-between gap-4">
+          <h2 data-slot="card-title" class="font-semibold">
+            L'infrastructure de ce site, décrite en code
+          </h2>
+          <span data-slot="badge" class="{{ badgeClass }}">à venir</span>
+        </div>
+      </div>
+      <div data-slot="card-content" class="px-6 [&:last-child]:pb-6 space-y-3">
+        <p class="max-w-prose">
+          Le serveur qui héberge ce site est encore administré à la main. Prochaine étape : le décrire avec les outils que je pratique par ailleurs (Terraform, Ansible) et publier le résultat ici. Cette entrée tiendra le compte — y compris si ça prend plus de temps que prévu.
+        </p>
+      </div>
+    </div>
+
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <div class="flex items-center justify-between gap-4">
+          <h2 data-slot="card-title" class="font-semibold">
+            Rust, Elixir
+          </h2>
+          <span data-slot="badge" class="{{ badgeClass }}">en veille</span>
+        </div>
+      </div>
+      <div data-slot="card-content" class="px-6 [&:last-child]:pb-6 space-y-3">
+        <p class="max-w-prose">
+          De la lecture et de la curiosité, pas encore de code à montrer. Cette entrée existe pour que ce journal reste honnête : si rien n'en sort, elle le dira.
+        </p>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-muted-foreground">
+      Journal mis à jour au fil de l'eau — dernière entrée : juillet 2026.
+    </p>
+  </div>
+{% endblock %}

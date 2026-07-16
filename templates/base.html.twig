@@ -38,6 +38,7 @@
         {% set ghostClass = 'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50' %}
         {% set sizeClass = 'h-9 px-4 py-2 has-[>svg]:px-3' %}
           <a href="{{ url('app_home') }}" class="{{ baseClass }} {{ route == 'app_home' ? activeClass : ghostClass }} {{ sizeClass }}">Accueil</a>
+          <a href="{{ url('app_experiments') }}" class="{{ baseClass }} {{ route == 'app_experiments' ? activeClass : ghostClass }} {{ sizeClass }}">Expérimentations</a>
           <a href="{{ url('app_contact') }}" class="{{ baseClass }} {{ route == 'app_contact' ? activeClass : ghostClass }} {{ sizeClass }}">Contact</a>
         </div>
       </div>
