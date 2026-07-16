@@ -6,7 +6,7 @@ Un CV de développeur affirme des choses qu'un document PDF ne peut pas prouver.
 
 ## La pile, et pourquoi
 
-- **Symfony 7.3 / PHP 8.4** — le socle que je pratique au quotidien. Le projet reste au plus près du skeleton : pas de bundle superflu pour un site de cette taille.
+- **Symfony 7.4 LTS / PHP 8.4** — le socle que je pratique au quotidien. Le projet reste au plus près du skeleton : pas de bundle superflu pour un site de cette taille.
 - **FrankenPHP (mode worker) + Caddy** — un seul service à opérer, HTTPS automatique, et l'occasion de pratiquer le runtime qui remplace progressivement PHP-FPM dans l'écosystème.
 - **AssetMapper + Tailwind (binaire standalone)** — aucune dépendance à Node ni chaîne de build JavaScript : les imports passent par l'importmap natif du navigateur, Tailwind est compilé par son binaire autonome. Moins de pièces mobiles à maintenir.
 - **Twig rendu serveur, pas de framework front** — un CV est un document ; le HTML rendu côté serveur suffit, et la page reste lisible par n'importe quel outil.
