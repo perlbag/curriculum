@@ -64,12 +64,18 @@
           <h2 data-slot="card-title" class="font-semibold">
             L'infrastructure de ce site, décrite en code
           </h2>
-          <span data-slot="badge" class="{{ badgeClass }}">à venir</span>
+          <span data-slot="badge" class="{{ badgeClass }}">en ligne</span>
         </div>
       </div>
       <div data-slot="card-content" class="px-6 [&:last-child]:pb-6 space-y-3">
         <p class="max-w-prose">
-          Le serveur qui héberge ce site est encore administré à la main. Prochaine étape : le décrire avec les outils que je pratique par ailleurs (Terraform, Ansible) et publier le résultat ici. Cette entrée tiendra le compte — y compris si ça prend plus de temps que prévu.
+          Le serveur qui héberge ce site (et quelques autres applications) est décrit dans un playbook Ansible idempotent : pare-feu et durcissement, Docker Swarm mono-nœud, Caddy en périphérie avec TLS automatique, Postgres partagé, observabilité, et la chaîne de déploiement continu. Ajouter une application se résume à une entrée YAML, ses secrets dans un vault chiffré — jamais commité — et un passage du playbook.
+        </p>
+        <p class="max-w-prose">
+          Cette entrée était annoncée « à venir » : le compte est tenu.
+        </p>
+        <p class="text-sm text-muted-foreground">
+          <a href="https://github.com/perlbag/infra" class="{{ linkClass }}">Le dépôt sur GitHub</a>
         </p>
       </div>
     </div>

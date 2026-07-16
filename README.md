@@ -25,6 +25,8 @@ Chaque push sur `main` déclenche le pipeline ([deploy.yml](.github/workflows/de
 
 L'image déployée est identifiée par le commit exact qui l'a produite : revenir en arrière consiste à redéployer un tag précédent.
 
+Le serveur cible est lui-même décrit en code — un playbook Ansible idempotent, publié dans [perlbag/infra](https://github.com/perlbag/infra).
+
 ## IA et méthode de travail
 
 Ce dépôt me sert aussi de terrain d'expérimentation pour le développement assisté par IA (Claude Code, Cursor) : l'historique git montre les commits co-écrits. Rien n'est intégré sans relecture — la responsabilité du code reste la mienne, pas celle de l'outil. Ces pratiques évoluent vite ; ce qui est décrit ici reflète un état, pas une doctrine.
