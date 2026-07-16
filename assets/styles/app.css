@@ -189,3 +189,12 @@
 html {
   font-size: var(--font-size);
 }
+
+/* Impression : le contenu seul, toujours en clair (le script beforeprint
+   retire la classe .dark, ces règles masquent la chrome de navigation). */
+@media print {
+  header,
+  footer {
+    display: none !important;
+  }
+}
