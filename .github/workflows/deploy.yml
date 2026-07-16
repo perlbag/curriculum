@@ -24,6 +24,10 @@ jobs:
 
       - uses: ramsey/composer-install@v3
 
+      # Les templates référencent le CSS compilé : sans build préalable,
+      # AssetMapper lève une exception au rendu.
+      - run: php bin/console tailwind:build
+
       - run: php bin/phpunit
 
   deploy:
